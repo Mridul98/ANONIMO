@@ -10,6 +10,7 @@ p , .text{
 }
 body{
     background: url(../images/martin-jernberg-69147-unsplash.jpg);
+    
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
@@ -26,6 +27,7 @@ body{
     background-color: #3c6382;
     border-radius: 10px;
     margin-top: 20px;
+    
 }
 
 .forms{
