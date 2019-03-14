@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Sacramento');
+@import url('https://fonts.googleapis.com/css?family=Sigmar+One');
+p , .text{
+    font-family: 'Sigmar One', cursive;;
+    font-weight: bold;
+    text-align: center;
+
+    color: black;
+    font-size:1.6rem;
+}
+body{
+    background: url(../images/martin-jernberg-69147-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-position: center;
+    overflow: hidden;
+    
+}
+.sub{
+  background-color:  #00b5cc !important;
+  border-radius: 10px;
+
+}
+.create{
+    background-color: #3c6382;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.forms{
+   margin-top: 10vh; 
+  
+
+   
+
+}
