@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Sacramento');
 @import url('https://fonts.googleapis.com/css?family=Sigmar+One');
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
 
 body,html{
    
@@ -9,15 +10,16 @@ body,html{
     
 }
 .name{
-    font-family: 'Sigmar One';
+    font-family: 'Gloria Hallelujah', cursive;
     font-weight: bold;
 }
 .navbar{
-    background-color:#487eb0;
+    background-color:#4a69bd;
 }
 .jumbotron{
     
-    background-image: url("../images/martin-jernberg-69147-unsplash.jpg")  ;
+
+    background-image: linear-gradient(to right,#000046,#1CB5E0);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -35,12 +37,17 @@ body,html{
     overflow: hidden;
     background-attachment: fixed;
    
-    background-color: rgb(199, 210, 212) ;
+    background-image:linear-gradient(to right,#000046,#1CB5E0) ;
     height: 60vh;
     width: 100vw;
-    margin-top: -30px;
+    margin-top: -40px;
 
     overflow: scroll;
+    
+}
+.proName{
+    text-align: center;
+    margin: auto;
     
 }
 #propic{
@@ -59,7 +66,10 @@ body,html{
     background-color:#ffff;
     opacity: 0.6;
     margin: 5px;
+    width: 340px;
 }
-.col{
-
+.bgFooter{
+   background-image: url("../images/martin-jernberg-69147-unsplash.jpg");
+   background-position: center;
+   
 }
