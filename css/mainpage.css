@@ -46,8 +46,13 @@ body,html{
     
 }
 .proName{
-    text-align: center;
-    margin: auto;
+    
+   display: block;
+   margin: auto;
+
+   max-width:200px;
+
+
     
 }
 #propic{
@@ -66,7 +71,8 @@ body,html{
     background-color:#ffff;
     opacity: 0.6;
     margin: 5px;
-    width: 340px;
+    
+    width: 320px;
 }
 .bgFooter{
    background-image: url("../images/martin-jernberg-69147-unsplash.jpg");
