@@ -9,6 +9,8 @@ if(isset($_POST['email']) && isset($_POST['username']) && isset($_POST['password
 
     echo "".$email.$username.$password;
 
+    header("Location: ../html/login.html");
+
 }
 
 
