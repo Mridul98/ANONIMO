@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Sacramento');
+@import url('https://fonts.googleapis.com/css?family=Sigmar+One');
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+
+
+body,html{
+   margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+section{
+    margin-top: 0px;
+    height:5vh;
+    background-color:#5352ed;
+}
+section h2{
+    
+    position: relative;
+    margin: auto;
+    
+    align-content: center;
+    
+    
+    font-size: 2.0rem;
+    letter-spacing: 20px;
+}

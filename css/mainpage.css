@@ -24,9 +24,13 @@ body,html{
     background-size: cover;
     background-position: center;
     width: 100vw;
-    height:40vh;
-    overflow: hidden;
+    height:25vh;
+    
+    overflow: auto;
     background-attachment: fixed;
+}
+#google{
+    display: none;
 }
 .home{
 
@@ -45,11 +49,16 @@ body,html{
     overflow: scroll;
     
 }
+.spaced{
+
+    letter-spacing: 25px;
+    text-align: center;
+}
 .proName{
     
    display: block;
    margin: auto;
-
+   
    max-width:200px;
 
 
