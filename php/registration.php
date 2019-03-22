@@ -9,20 +9,30 @@ if(isset($_POST['email']) && isset($_POST['username']) && isset($_POST['password
     $salt2 = '123'; 
     $token = password_hash($passWord,PASSWORD_BCRYPT);
     // $token = hash('ripemd128','$password');
-
+    $send = file_get_contents('../html/redirect.html');
 
     $connection = new mysqli($host,$username,'',$db);
     if($connection->connect_error==false) {
 
 
-       $query = "INSERT INTO user (Email, Username, Password) values('$email','$userName','$token')";
-       if($connection->query($query)===TRUE){
+      $query = "INSERT INTO user (Email, Username, Password) values('$email','$userName','$token')";
+       $check = "SELECT * FROM user WHERE Username = '$userName'";
+       
+       $result = $connection->query($check);
+       if(($result->num_rows >0) || (!$connection->query($query))){
+        echo $send;
+        //header('location:http://localhost/anonimo/html/register.html');
+     
+       }
+       else echo file_get_contents('../html/success.html');
+       $connection->close();
+       /*if($connection->query($query)===TRUE){
            echo "inserted to the database";
            
-
-           header('location:http://localhost/anonimo/html/login.html');
+           $connection->close();
+           //header('location:http://localhost/anonimo/html/login.html');
        } else echo $connection->error;
-    
+       */
 
     } 
     

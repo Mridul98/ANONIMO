@@ -14,18 +14,11 @@
     <script src="../js/login.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
     <script>
-        window.onload = function(){
-            var xmlreq = new XMLHttpRequest();
-        xmlreq.onreadystatechange = function(){
-            if(this.readyState == 4 && this.status==200){
-               console.log(this.responseText);
-            }
-        }
-        xmlreq.open("GET","../php/registration.php",false);
-        xmlreq.send();
-    
-        }
-        
+       window.onload = function(){
+
+            alert("Your Username or Email is taken, Please try different username and email");
+       }
+      
     </script>
 </head>
 <body>
