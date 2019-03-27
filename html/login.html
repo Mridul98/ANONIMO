@@ -19,17 +19,18 @@
 </head>
 <body>
     <div class="container">
+
         <div class="forms align-middle">
             <p>ANONIMO</p>
             
-            <form action="mainpage.html" >
+            <form action="../php/verify.php" method="POST">
                 <div class="form-group">
                     <label for="username" class="text">Username</label>
-                    <input type="text" class="form-control" id="username" placeholder="Enter Your name ">
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter Your name ">
                 </div>
                 <div class="form-group">
                     <label for="password" class="text">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password">
                 </div>
 
 
@@ -37,7 +38,7 @@
 
             
             </form>
-            <button class="btn text create" id="create" >Create New Account</button>
+            <button class="btn text create" id="create" onclick="window.location.href = '/html/register.html'" >Create New Account</button>
 
         </div>
         

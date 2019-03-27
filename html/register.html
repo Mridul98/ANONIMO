@@ -14,17 +14,7 @@
     <script src="../js/login.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
     <script>
-        window.onload = function(){
-            var xmlreq = new XMLHttpRequest();
-        xmlreq.onreadystatechange = function(){
-            if(this.readyState == 4 && this.status==200){
-               console.log(this.responseText);
-            }
-        }
-        xmlreq.open("GET","../php/registration.php",false);
-        xmlreq.send();
-    
-        }
+        
         
     </script>
 </head>
@@ -35,19 +25,19 @@
             <form action="../php/registration.php" method="POST" >
                 <div class="form-group">
                     <label for="email" class="text">E-mail</label>
-                    <input type="text" class="form-control" id="email" name="email" placeholder="Enter Your email ">
+                    <input type="text" class="form-control" id="email" name="email" placeholder="Enter Your email "required>
                 </div>
                 <div class="form-group">
                         <label for="username" class="text">Username</label>
-                        <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username">
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" required>
                     </div>
                 <div class="form-group">
                     <label for="password" class="text">Password</label>
-                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
                 </div>
                 <div class="form-group">
                     <label for="confirmPassword" class="text">Confirm Password</label>
-                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Enter your password again ">
+                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Enter your password again "required>
 
                     
                 </div>

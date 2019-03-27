@@ -19,13 +19,17 @@ if(isset($_POST['email']) && isset($_POST['username']) && isset($_POST['password
        $check = "SELECT * FROM user WHERE Username = '$userName'";
        
        $result = $connection->query($check);
-       if(($result->num_rows >0) || (!$connection->query($query))){
-        echo $send;
-        //header('location:http://localhost/anonimo/html/register.html');
+       if(($result->num_rows > 0) || (!$connection->query($query))){
+       
+        header('location:http://localhost/anonimo/html/redirect.html');
      
        }
-       else echo file_get_contents('../html/success.html');
-       $connection->close();
+       else 
+       {   header('location:http://localhost/anonimo/html/success.html');
+           //echo file_get_contents('../html/success.html');
+           $connection->close();
+       }
+       
        /*if($connection->query($query)===TRUE){
            echo "inserted to the database";
            
@@ -38,6 +42,7 @@ if(isset($_POST['email']) && isset($_POST['username']) && isset($_POST['password
     
 
    // header("Location: ../html/login.html");
+   
 
 }
 
