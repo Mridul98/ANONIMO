@@ -13,10 +13,61 @@
     <link rel="stylesheet" href="../css/mainpage.css">
     <script>
       window.onload = function(){
+         var person;
+         var col = document.createElement('div');
+         var card = document.createElement('div');
+         var cardBody = document.createElement('div');
+         var para = document.createElement('p');
+         var mainContainer = document.getElementById('mainContainer');
+         para.className = "card-text";
+         cardBody.className = "card-body";
+         card.className = "card";
+         col.className = "col";
+         
+         cardBody.appendChild(para);
+         card.appendChild(cardBody);
+         col.appendChild(card);
+
+         col.className = "col";
+
+         var xmlHTTPreq = new XMLHttpRequest();
+         xmlHTTPreq.onload = function(){
+           if(this.readyState==4 && this.status==200){
+
+               console.log(this.responseText);
+               person = JSON.parse(this.responseText);
+               console.log(person);
+               for(var i = 0 ;i<person.messages.length;i++){
+                var col = document.createElement('div');
+         var card = document.createElement('div');
+         var cardBody = document.createElement('div');
+         var para = document.createElement('p');
+         var mainContainer = document.getElementById('mainContainer');
+         para.className = "card-text";
+         cardBody.className = "card-body";
+         card.className = "card";
+         col.className = "col";
+         
+         cardBody.appendChild(para);
+         card.appendChild(cardBody);
+         col.appendChild(card);
+
+         col.className = "col";
+
+                 para.innerHTML = person.messages[i];
+                 mainContainer.appendChild(col);
+               }
+
+              document.getElementById('copy').innerText = person.user;
+
+              
+           }
+         };
+         xmlHTTPreq.open("GET", "../php/continue.php",true);
+         xmlHTTPreq.send();
+         
         
-         var copied = document.getElementById("google");
-         
-         
+        
         
       }
       
@@ -68,143 +119,15 @@
   
 
 
-  <h2 class=" proName name spaced"id ="copy" >Mahmud Un Nabi Mridul</h2>
+
+
+  <h2 class=" proName name spaced"id ="copy" ></h2>
 </div>
 <div class="home">
     <div class="container">
-        <div class="row name">
-        <div class="col ">
-                <div class="card" >
-                        
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis maxime non, molestiae suscipit, quae error aliquid praesentium voluptas doloribus dolores eligendi ullam repellendus asperiores numquam omnis id. Sequi, in molestias?</p>
-                          
-                        </div>
-                      </div>
-
-        </div>
-        <div class="col ">
-                <div class="card">
-                        
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          
-                        </div>
-                      </div>
-
-        </div>
-        <div class="col ">
-                <div class="card" >
-                        
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          
-                        </div>
-                      </div>
-
-        </div>
-        <div class="col ">
-                <div class="card" >
-                        
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          
-                        </div>
-                      </div>
-
-        </div>
-        <div class="col ">
-                <div class="card" ">
-                        
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          
-                        </div>
-                      </div>
-
-        </div>
-        <div class="col ">
-                <div class="card" >
-                        
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          
-                        </div>
-                      </div>
-
-        </div>
-        <div class="col ">
-                <div class="card" >
-                        
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          
-                        </div>
-                      </div>
-
-        </div>
-        <div class="col ">
-                <div class="card">
-                        
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          
-                        </div>
-                      </div>
-
-        </div>
-        <div class="col ">
-                <div class="card" >
-                        
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          
-                        </div>
-                      </div>
-
-        </div>
-        <div class="col ">
-                <div class="card" >
-                        
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          
-                        </div>
-                      </div>
-
-        </div>
-        <div class="col ">
-                <div class="card" >
-                        
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          
-                        </div>
-                      </div>
-
-        </div>
-        <div class="col ">
-                <div class="card">
-                        
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          
-                        </div>
-                      </div>
-
-        </div>
+        <div class="row name" id="mainContainer">
+        
+        
     </div>
 
     
