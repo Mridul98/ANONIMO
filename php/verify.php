@@ -15,7 +15,8 @@ if($connection->connect_error== false){
                 $_SESSION['username'] = $username;
                 
                 echo "session started";
-                header('location:http://localhost/anonimo/html/mainpage.html');
+                header('location:http://localhost/anonimo/php/continue.php');
+                $connection->close();
 
         }
         else echo "YOU DIDNT REGISTER YET!";
