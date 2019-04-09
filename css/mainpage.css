@@ -9,10 +9,6 @@ body,html{
     height: 100%;
     
 }
-.name{
-    font-family: 'Gloria Hallelujah', cursive;
-    font-weight: bold;
-}
 .navbar{
     background-color:#4a69bd;
 }
@@ -25,7 +21,9 @@ body,html{
     background-position: center;
     width: 100vw;
     height:40vh;
-    
+    display: flex;
+    justify-content: center;
+    align-content: center;
     overflow: auto;
     background-attachment: fixed;
 }
@@ -44,36 +42,27 @@ body,html{
     background-image:linear-gradient(to right,#000046,#1CB5E0) ;
     height: 60vh;
     width: 100vw;
-    margin-top: -40px;
+    margin-top: -45px;
 
-    overflow: scroll;
+    overflow: auto;
     
 }
-.spaced{
 
-    letter-spacing: 25px;
-    text-align: center;
-}
 .proName{
     
    display: block;
    margin: auto;
+   font-family: 'Gloria Hallelujah', cursive;
+   font-weight: bold;
+   letter-spacing: 25px;
+   text-align: center;
    
    max-width:200px;
 
 
     
 }
-#propic{
-    
-    height: 200px;
-    width: 200px;
-    
-    margin-left: 50%;
-    margin-right:50%; 
-    z-index: 1;
 
-}
 .card{
 
 

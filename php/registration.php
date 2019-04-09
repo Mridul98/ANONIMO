@@ -20,13 +20,16 @@ if(isset($_POST['email']) && isset($_POST['username']) && isset($_POST['password
        
        $result = $connection->query($check);
        if(($result->num_rows > 0) || (!$connection->query($query))){
-       
+        
+
         header('location:http://localhost/anonimo/html/redirect.html');
      
        }
        else 
        {   header('location:http://localhost/anonimo/html/success.html');
            //echo file_get_contents('../html/success.html');
+           $welcome = "INSERT INTO tweets(user,message) values('$userName','WELCOME TO ANONIMO,PLEASE SHARE THE LINK ABOVE TO YOUR SOCIAL MEDIA TO LET YOUR FRIEND MESSAGE YOU ANONIMOUSLY')";
+           $ins = $connection->query($welcome);
            $connection->close();
        }
        

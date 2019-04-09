@@ -1,3 +1,13 @@
+
+<?php
+ $user = $_GET['user'];
+ 
+
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,12 +29,12 @@
         </div>
     </nav>
     <div class="jumbotron">
-        <h2 class="fonts">MAHMUD UN NABI MRIDUL </h2>
+        <h2 class="fonts"><?php echo $user?> </h2>
         
 
     </div>
     <div class="mainPanel">
-        <form action="../php/comment.php" method="POST">
+        <form action="../php/comment.php?user=<?php echo $user ?>" method="POST">
         <div class="input-group textAreaPanel">
             <textarea class="form-control " aria-label="With textarea" placeholder="Say something about me!" name="tweet"></textarea>
         </div>

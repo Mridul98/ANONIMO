@@ -1,5 +1,6 @@
 <?php
 require 'access.php';
+
 if(isset($_POST['username']) && isset($_POST['password'])){
 $username = $_POST['username'];
 $password = $_POST['password'];
@@ -15,7 +16,8 @@ if($connection->connect_error== false){
                 $_SESSION['username'] = $username;
                 
                 echo "session started";
-                header('location:http://localhost/anonimo/php/continue.php');
+                //header('location:http://localhost/anonimo/php/continue.php');
+                header('location:http://localhost/anonimo/html/mainpage.html');
                 $connection->close();
 
         }

@@ -22,22 +22,36 @@ if(isset($_SESSION['username'])){
                    array_push($tweets,$rows['message']);
                    
               }
-              $person->user = $ml;
+
+
+
+              $person->user = "$ml";
               $person->messages = $tweets;
               //header('location:http://localhost/anonimo/html/mainpage.html');
               echo json_encode($person);
+
               
          }
 
          $connection->close();
-               
+         //unset($_SESSION['username']);
+         //session_destroy();      
 
      } 
+     if(isset($_POST['logout'])){
+          $log = $_POST['logout'];
+          if($log==="yes") {
+               $_SESSION = array();
+               session_destroy();
+               header('location:http://localhost/anonimo/html/login.html');
+          }
+     }
 
 }
+
 //echo session_id();
-//unset($_SESSION['username']);
-//session_destroy();
+//
+
 //
 //header('location:http://localhost/anonimo/html/mainpage.html');
 

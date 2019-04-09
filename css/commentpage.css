@@ -21,6 +21,33 @@ body,html{
     margin: auto;
     max-width: 200px;
 }
+.card{
+
+
+    background-color:rgb(140, 179, 216);
+    opacity: 0.6;
+    margin: 5px;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-weight: bold;
+    width: 320px;
+}
+.home{
+
+      
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    background-attachment: fixed;
+   
+    background-image:linear-gradient(to right,#000046,#1CB5E0) ;
+    height: 70vh;
+    width: 100vw;
+    margin-top: -40px;
+
+    overflow: auto;
+    
+}
 .jumbotron{
     
     
@@ -30,7 +57,7 @@ body,html{
         background-size: cover;
         background-position: center;
         width: 100vw;
-        height:50vh;
+        height:30vh;
         
         overflow: auto;
         background-attachment: fixed;
@@ -48,10 +75,10 @@ body,html{
     margin-top: 10px;
 }
 textarea{
-    overflow: auto;
+    overflow: hidden;
     max-width: 95vw;
     max-height: 50px;
-    overflow: scroll;
+    
     margin: auto;
 }
 .textAreaPanel{

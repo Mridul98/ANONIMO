@@ -1,4 +1,4 @@
-
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,21 +14,6 @@
     <script>
       window.onload = function(){
          var person;
-         var col = document.createElement('div');
-         var card = document.createElement('div');
-         var cardBody = document.createElement('div');
-         var para = document.createElement('p');
-         var mainContainer = document.getElementById('mainContainer');
-         para.className = "card-text";
-         cardBody.className = "card-body";
-         card.className = "card";
-         col.className = "col";
-         
-         cardBody.appendChild(para);
-         card.appendChild(cardBody);
-         col.appendChild(card);
-
-         col.className = "col";
 
          var xmlHTTPreq = new XMLHttpRequest();
          xmlHTTPreq.onload = function(){
@@ -39,20 +24,20 @@
                console.log(person);
                for(var i = 0 ;i<person.messages.length;i++){
                 var col = document.createElement('div');
-         var card = document.createElement('div');
-         var cardBody = document.createElement('div');
-         var para = document.createElement('p');
-         var mainContainer = document.getElementById('mainContainer');
-         para.className = "card-text";
-         cardBody.className = "card-body";
-         card.className = "card";
-         col.className = "col";
+                var card = document.createElement('div');
+                var cardBody = document.createElement('div');
+                var para = document.createElement('p');
+                var mainContainer = document.getElementById('mainContainer');
+                para.className = "card-text";
+                cardBody.className = "card-body";
+                card.className = "card";
+                col.className = "col";
          
-         cardBody.appendChild(para);
-         card.appendChild(cardBody);
-         col.appendChild(card);
+                cardBody.appendChild(para);
+                card.appendChild(cardBody);
+                col.appendChild(card);
 
-         col.className = "col";
+                col.className = "col";
 
                  para.innerHTML = person.messages[i];
                  mainContainer.appendChild(col);
@@ -80,7 +65,7 @@
 </head>
 
 <body>
-<header>
+
 
 
     <nav class="navbar  navbar-expand-lg navbar-light name ">
@@ -97,7 +82,7 @@
                 
                 <li class="nav-item">  
                     <input type="text" id="google" value="www.google.com" >
-                    <button class="btn btn-info" onclick = "copied()">Copy profile link to clipboard</button>
+                    <button class="btn btn-info" onclick = "()">Copy profile link to clipboard</button>
 
                 </li>
                 <li class="nav-item ">
@@ -107,21 +92,24 @@
                     <a href="../html/login.html" class="nav-link">Change Password</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/html/login.html" class="nav-link">Log Out</a>
+                    <a href="../html/login.html" class="nav-link">Log Out</a>
                 </li>
 
             </ul>
         </div>
     </nav>
-</header>
+
 
 <div class="jumbotron">
+    <div class="holder">
+        <h2 class=" proName"id ="copy" >granite123</h2>
+    </div>
   
 
 
 
 
-  <h2 class=" proName name spaced"id ="copy" ></h2>
+  
 </div>
 <div class="home">
     <div class="container">
@@ -131,7 +119,7 @@
     </div>
 
     
-    </div>
+</div>
     
     
 </div>
@@ -143,6 +131,151 @@
         
 
     
+    
+    
+</body>
+</html>
+!-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/commentpage.css">
+    <title>ANONIMO</title>
+    <script>
+            window.onload = function(){
+               var person;
+               var getPersonName = function(){
+
+               }
+      
+               var xmlHTTPreq = new XMLHttpRequest();
+               xmlHTTPreq.onload = function(){
+                 if(this.readyState==4 && this.status==200){
+                     if(this.responseText==null){
+                         location.href="localhost/anonimo/html/login.html";
+                     }
+                     console.log(this.responseText);
+                     person = JSON.parse(this.responseText);
+
+                     console.log(person.user);
+                     for(var i = 0 ;i<person.messages.length;i++){
+                      var col = document.createElement('div');
+                      var card = document.createElement('div');
+                      var cardBody = document.createElement('div');
+                      var para = document.createElement('p');
+                      var mainContainer = document.getElementById('mainContainer');
+                      var google = document.getElementById('google');
+                      google.value = "localhost/anonimo/html/commentpage.php?user=".concat(person.user);
+                      para.className = "card-text";
+                      cardBody.className = "card-body";
+                      card.className = "card";
+                      col.className = "col";
+               
+                      cardBody.appendChild(para);
+                      card.appendChild(cardBody);
+                      col.appendChild(card);
+                      
+                     
+      
+                       para.innerHTML = person.messages[i];
+                       mainContainer.appendChild(col);
+                     }
+      
+                    document.getElementById('copy').innerText = person.user;
+      
+                    
+                 }
+               };
+               xmlHTTPreq.open("GET", "../php/continue.php",true);
+               xmlHTTPreq.send();
+               
+              
+              
+              
+            }
+            function myFunction() {
+                    /* Get the text field */
+                     var copyText = document.getElementById("google");
+
+                    /* Select the text field */
+                     copyText.select();
+
+                    /* Copy the text inside the text field */
+                     document.execCommand("copy");
+
+                    /* Alert the copied text */
+                     alert("Copied the text: " + copyText.value);
+            }
+            function logOut(){
+                var xhttp = new XMLHttpRequest();
+                xhttp.open("POST","../php/continue.php",true);
+                xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+
+                xhttp.send("logout=yes");
+                location.replace("http://localhost/anonimo/html/login.html")
+
+            }
+            
+            
+             
+          
+          
+          </script>
+</head>
+<body>
+
+    <nav class="navbar navbar-fixed-top  navbar-expand-lg navbar-light name "> 
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navItems">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-header">
+                    <a href="#" class="navbar-brand name ">ANONIMO</a>
+                </div>
+                <div class="collapse navbar-collapse " id="navItems">
+        
+                    <ul class="navbar-nav">
+                        
+                        <li class="nav-item">  
+
+                            <input type="text" id="google" value="" >
+                            <button class="btn btn-info" onclick = "myFunction()">Copy profile link to clipboard</button>
+        
+                        </li>
+                        
+                        <li class="nav-item ">
+                            <a href="../html/login.html" class="nav-link">Change Password</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../html/login.html" class="nav-link" onclick="logOut()">Log Out</a>
+                        </li>
+        
+                    </ul>
+                </div> 
+        
+    </nav>
+    <div class="jumbotron">
+        <h2 class="fonts "id="copy"></h2>
+        
+
+    </div>
+    <div class="home">
+        <div class="container">
+            <div class="row name" id="mainContainer">
+        
+        
+            </div>
+        
+        </div>
+            
+    </div>
     
     
 </body>
