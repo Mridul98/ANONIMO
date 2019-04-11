@@ -20,8 +20,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/commentpage.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <title>ANONIMO</title>
 </head>
+<script>
+    function sent(){
+        Swal.fire("Sent!");
+    }
+</script>
 <body>
     <nav class="navbar  navbar-expand-lg navbar-light name ">  
         <div class="navbar-header d-block">
@@ -39,7 +45,7 @@
             <textarea class="form-control " aria-label="With textarea" placeholder="Say something about me!" name="tweet"></textarea>
         </div>
         <div class="buttonArea">
-            <button class="btn btn-primary send">Send</button>
+            <button class="btn btn-primary send" onClick = "sent()">Send</button>
         </div>
         </form>
     </div>

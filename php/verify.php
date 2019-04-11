@@ -20,10 +20,10 @@ if($connection->connect_error== false){
                 header('location:http://localhost/anonimo/html/mainpage.html');
                 $connection->close();
 
+            }
+            else echo "YOU DIDNT REGISTER YET!";
         }
-        else echo "YOU DIDNT REGISTER YET!";
-    }
-}
+    } else echo "You are not here!";
 } else echo "connection error";
 
 } else echo "username and password not set";

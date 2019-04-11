@@ -148,6 +148,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/commentpage.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <title>ANONIMO</title>
     <script>
             window.onload = function(){
@@ -159,12 +160,10 @@
                var xmlHTTPreq = new XMLHttpRequest();
                xmlHTTPreq.onload = function(){
                  if(this.readyState==4 && this.status==200){
-                     if(this.responseText==null){
-                         location.href="localhost/anonimo/html/login.html";
-                     }
+                     
                      console.log(this.responseText);
                      person = JSON.parse(this.responseText);
-
+                     
                      console.log(person.user);
                      for(var i = 0 ;i<person.messages.length;i++){
                       var col = document.createElement('div');
@@ -212,7 +211,14 @@
                      document.execCommand("copy");
 
                     /* Alert the copied text */
-                     alert("Copied the text: " + copyText.value);
+                     Swal.fire({
+
+                         title:"Copied",
+                         width:400,
+                         padding:'3em',
+                         
+                     });
+                    // Swal.fire("Copied the text: " + copyText.value);
             }
             function logOut(){
                 var xhttp = new XMLHttpRequest();

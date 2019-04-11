@@ -48,6 +48,9 @@ if(isset($_SESSION['username'])){
      }
 
 }
+else {
+     header('location:http://localhost/anonimo/html/login.html');
+}
 
 //echo session_id();
 //

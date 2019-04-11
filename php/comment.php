@@ -11,7 +11,8 @@ if(isset($_POST['tweet']) && isset($_GET['user'])){
     }
     $sql = "INSERT INTO tweets(user,message) VALUES('$user','$tweet')";
     if($conn->query($sql)=== TRUE){
-        echo "saved";
+        $conn->close();
+        header('location:http://localhost/anonimo/html/commentpage.php?user=$user');
         exit();
     }
 
