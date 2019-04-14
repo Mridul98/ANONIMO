@@ -231,6 +231,14 @@
                 window.location.replace("http://localhost/anonimo/html/login.html")
 
             }
+            function changePassword(){
+                var xhttp = new XMLHttpRequest();
+                xhttp.open("POST","../php/continue.php",true);
+                xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+
+                xhttp.send("changePass=yes");
+                Swal.fire("Please check your email for new passoword");
+            }
             
             
              
@@ -259,7 +267,7 @@
                         </li>
                         
                         <li class="nav-item ">
-                            <a href="../html/login.html" class="nav-link">Change Password</a>
+                            <a href="#" class="nav-link" onClick="changePassword()">Change Password</a>
                         </li>
                         <li class="nav-item">
                             <a href="../html/login.html" class="nav-link" onclick="logOut()">Log Out</a>

@@ -21,7 +21,7 @@ if($connection->connect_error== false){
                 $connection->close();
 
             }
-            else echo "YOU DIDNT REGISTER YET!";
+            else header('location:http://localhost/anonimo/html/redreg.html');
         }
     } else header('location:http://localhost/anonimo/html/redreg.html');
 } else echo "connection error";

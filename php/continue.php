@@ -47,6 +47,28 @@ if(isset($_SESSION['username'])){
               // header('location:http://localhost/anonimo/html/login.html');
           }
      }
+     if(isset($_POST['changePass'])){
+          $connection = $connection = new mysqli($host,$username,'',$db);
+          if($connection->connect_error==false){
+               $rand = rand(200,20000);
+               $hash = password_hash($rand,PASSWORD_BCRYPT);
+               $changePassword = "UPDATE user SET Password='$hash' WHERE Username ='$ml' ";
+               $result  = $connection->query($changePassword);
+               $getMail = "SELECT Email FROM user WHERE Username='$ml'";
+               $mails = $connection->query($getMail);
+               if($mail->num_rows>0){
+                    while($rows = $mails->fetch_assoc()){
+                        if($result===TRUE){
+                             
+                         mail($rows['Email'],"your random anonimo password",$rand,"anonimo@gmail.com");
+                         $connection->close();
+                        } 
+                    }
+               }
+               
+
+          }
+     }
 
 }
 else {
