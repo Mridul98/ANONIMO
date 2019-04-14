@@ -163,8 +163,10 @@
                      
                      console.log(this.responseText);
                      person = JSON.parse(this.responseText);
-                     
-                     console.log(person.user);
+                     if(person == "loggedout"){
+                         window.location.href = "http://localhost/anonimo/html/login.html";
+                     }
+                     //console.log(person.user);
                      for(var i = 0 ;i<person.messages.length;i++){
                       var col = document.createElement('div');
                       var card = document.createElement('div');
@@ -226,7 +228,7 @@
                 xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 
                 xhttp.send("logout=yes");
-                location.replace("http://localhost/anonimo/html/login.html")
+                window.location.replace("http://localhost/anonimo/html/login.html")
 
             }
             

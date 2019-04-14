@@ -12,7 +12,7 @@ if(isset($_POST['tweet']) && isset($_GET['user'])){
     $sql = "INSERT INTO tweets(user,message) VALUES('$user','$tweet')";
     if($conn->query($sql)=== TRUE){
         $conn->close();
-        header('location:http://localhost/anonimo/html/commentpage.php?user=$user');
+        header('location:http://localhost/anonimo/html/commentpage.php?user='.$user);
         exit();
     }
 

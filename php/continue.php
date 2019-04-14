@@ -43,13 +43,14 @@ if(isset($_SESSION['username'])){
           if($log==="yes") {
                $_SESSION = array();
                session_destroy();
-               header('location:http://localhost/anonimo/html/login.html');
+
+              // header('location:http://localhost/anonimo/html/login.html');
           }
      }
 
 }
 else {
-     header('location:http://localhost/anonimo/html/login.html');
+    echo json_encode("loggedout");
 }
 
 //echo session_id();

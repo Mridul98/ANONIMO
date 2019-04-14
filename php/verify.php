@@ -23,7 +23,7 @@ if($connection->connect_error== false){
             }
             else echo "YOU DIDNT REGISTER YET!";
         }
-    } else echo "You are not here!";
+    } else header('location:http://localhost/anonimo/html/redreg.html');
 } else echo "connection error";
 
 } else echo "username and password not set";
